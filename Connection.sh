@@ -17,7 +17,7 @@ device10() { ping 192.168.1.12 -c 2 > $output; if [ $? -ne 0 ]; then echo "${uni
 device11() { ping 192.168.1.13 -c 2 > $output; if [ $? -ne 0 ]; then echo "${units[10]} is unreachable."; else echo "${units[10]} is online."; fi }
 device12() { ping 192.168.1.14 -c 2 > $output; if [ $? -ne 0 ]; then echo "${units[11]} is unreachable."; else echo "${units[11]} is online."; fi }
 device13() { ping 192.168.1.15 -c 2 > $output; if [ $? -ne 0 ]; then echo "${units[12]} is unreachable."; else echo "${units[12]} is online."; fi } 
-device14() { ping 192.168.1.252 -c 2 > $output; if [ $? -ne 0 ]; then echo "${units[13]} is unreachable."; else echo "${units[13]} is online."; fi }
+device14() { ping 192.168.1.16 -c 2 > $output; if [ $? -ne 0 ]; then echo "${units[13]} is unreachable."; else echo "${units[13]} is online."; fi }
 
 #Function for checking internet status with a DNS server ping.
 internet() { ping 9.9.9.9 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "The internet is unreachble."; else echo "The internet is connected and reachable."; fi }
