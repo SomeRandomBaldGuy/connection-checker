@@ -1,94 +1,64 @@
 #!/bin/bash
 
 # This scipt acts a connectivity check for my lab devices.
-
-a="Device 01"
-b="Device 02"
-c="Device 03"
-d="Device 04"
-e="Device 05"
-f="Device 06"
-g="Device 07"
-h="Device 08"
-i="Device 09"
-j="Device 10"
-k="Device 11"
-l="Device 12"
-m="Device 13"
-n="Device 14"
-
-
+array=("Device 01" "Device 02" "Device 03" "Device 04" "Device 05" "Device 06" "Device 07" "Device 08" "Device 09" "Device 10" "Device 11" "Device 12" "Device 13" "Device 14")
 
 #Function for device 1.
 device01() {
-     ping 192.168.1.1 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$a is unreachable."; else echo "$a is online."; fi
+     ping 192.168.1.1 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[0]} is unreachable."; else echo "${array[0]} is online."; fi
 }
-
 #Function for device 2.
 device02() {
-     ping 192.168.1.2 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$b is unreachable."; else echo "$b is online."; fi
+     ping 192.168.1.2 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[1]} is unreachable."; else echo "${array[1]} is online."; fi
 }
-
 #Function for device 3.
 device03() {
-     ping 192.168.1.3 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$c is unreachable."; else echo "$c is online."; fi
+     ping 192.168.1.3 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[2]} is unreachable."; else echo "${array[2]} is online."; fi
 }
-
 #Function for device 4.
 device04() {
-     ping 192.168.1.4 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$d is unreachable."; else echo "$d is online."; fi
+     ping 192.168.1.4 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[3]} is unreachable."; else echo "${array[3]} is online."; fi
 }
-
 #Function for device 5.
 device05() {
-     ping 192.168.1.5 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$e is unreachable."; else echo "$e is online."; fi
+     ping 192.168.1.5 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[4]} is unreachable."; else echo "${array[4]} is online."; fi
 }
-
 #Function for device 6.
 device06() {
-     ping 192.168.1.6 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$f is unreachable."; else echo "$f is online."; fi
+     ping 192.168.1.6 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[5]} is unreachable."; else echo "${array[5]} is online."; fi
 }
-
 #Function for device 7.
 device07() {
-     ping 192.168.1.7 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$g is unreachable."; else echo "$g is online."; fi
+     ping 192.168.1.7 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[6]} is unreachable."; else echo "${array[6]} is online."; fi
 }
-
 #Function for device 8.
 device08() {
-     ping 192.168.1.8 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$h is unreachable."; else echo "$h is online."; fi
+     ping 192.168.1.8 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[7]} is unreachable."; else echo "${array[7]} is online."; fi
 }
-
 #Function for device 9.
 device09() {
-     ping 192.168.1.11 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$i is unreachable."; else echo "$i is online."; fi
+     ping 192.168.1.11 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[8]} is unreachable."; else echo "${array[8]} is online."; fi
 }
-
 #Function for device 10.
 device10() {
-     ping 192.168.1.12 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$j is unreachable."; else echo "$j is online."; fi
+     ping 192.168.1.12 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[9]} is unreachable."; else echo "${array[9]} is online."; fi
 }
-
 #Function for device 11.
 device11() {
-     ping 192.168.1.13 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$k is unreachable."; else echo "$k is online."; fi
+     ping 192.168.1.13 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[10]} is unreachable."; else echo "${array[10]} is online."; fi
 }
-
 #Function for device 12.
 device12() {
-     ping 192.168.1.14 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$l is unreachable."; else echo "$l is online."; fi
+     ping 192.168.1.14 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[11]} is unreachable."; else echo "${array[11]} is online."; fi
 }
-
 #Function for device 13.
 device13() {
-     ping 192.168.1.15 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$m is unreachable."; else echo "$m is online."; fi
+     ping 192.168.1.15 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[12]} is unreachable."; else echo "${array[12]} is online."; fi
 }     
-     
 #Function for device 14.
 device14() {
-     ping 192.168.1.252 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "$n is unreachable."; else echo "$n is online."; fi
+     ping 192.168.1.252 -c 2 > /dev/null; if [ $? -ne 0 ]; then echo "${array[13]} is unreachable."; else echo "${array[13]} is online."; fi
 }
-
 #Function for checking internet status with a DNS server ping.
 internet() {
      ping 9.9.9.9 -c 4 > /dev/null; if [ $? -ne 0 ]; then echo "The internet is unreachble."; else echo "The internet is connected and reachable."; fi
