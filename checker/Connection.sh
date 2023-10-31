@@ -6,6 +6,9 @@ output=/dev/null
 up="is showing online."
 down="is showing unreachable."
 
+interup="The internet is connected and reachable."
+interdown="The internet is unreachble."
+
 #Functions for testing connection on each device.
 device01() { ping "${address[0]}" -c 2 > $output; if ! ping "${address[0]}" -c 2 > $output; then echo "${units[0]} $down"; else echo "${units[0]} $up"; fi }
 device02() { ping "${address[1]}" -c 2 > $output; if ! ping "${address[1]}" -c 2 > $output; then echo "${units[1]} $down"; else echo "${units[1]} $up"; fi }
@@ -24,7 +27,7 @@ device14() { ping "${address[13]}" -c 2 > $output; if ! ping "${address[13]}" -c
 device15(){ ping "${address[14]}" -c 2 > $output; if ! ping "${address[14]}" -c 2 > $output; then echo "${units[14]} $down"; else echo "${units[14]} $up"; fi }
 
 #Function for checking internet status with a DNS server ping.
-internet() { ping 9.9.9.9 -c 4 > /dev/null; if ping 9.9.9.9 -c 4 > /dev/null; then echo "The internet is unreachble."; else echo "The internet is connected and reachable."; fi }
+internet() { ping 9.9.9.9 -c 4 > /dev/null; if ! ping 9.9.9.9 -c 4 > /dev/null; then echo "$interdown"; else echo "$interup"; fi }
 
 echo "The scipt will now test your devices connection status. Please wait..."; echo
 device01; device02; device03; device04; device05; device06; device07; device08; device09; device10; device11; device12; device13; device14; internet
