@@ -24,7 +24,7 @@ device11() { ping "${address[10]}" -c 2 > $output; if ! ping "${address[10]}" -c
 device12() { ping "${address[11]}" -c 2 > $output; if ! ping "${address[11]}" -c 2 > $output; then echo "${units[11]} $down"; else echo "${units[11]} $up"; fi }
 device13() { ping "${address[12]}" -c 2 > $output; if ! ping "${address[12]}" -c 2 > $output; then echo "${units[12]} $down"; else echo "${units[12]} $up"; fi } 
 device14() { ping "${address[13]}" -c 2 > $output; if ! ping "${address[13]}" -c 2 > $output; then echo "${units[13]} $down"; else echo "${units[13]} $up"; fi }
-device15(){ ping "${address[14]}" -c 2 > $output; if ! ping "${address[14]}" -c 2 > $output; then echo "${units[14]} $down"; else echo "${units[14]} $up"; fi }
+device15() { ping "${address[14]}" -c 2 > $output; if ! ping "${address[14]}" -c 2 > $output; then echo "${units[14]} $down"; else echo "${units[14]} $up"; fi }
 
 #Function for checking internet status with a DNS server ping.
 internet() { ping 9.9.9.9 -c 4 > /dev/null; if ! ping 9.9.9.9 -c 4 > /dev/null; then echo "$interdown"; else echo "$interup"; fi }
